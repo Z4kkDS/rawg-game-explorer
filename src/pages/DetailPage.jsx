@@ -58,6 +58,8 @@ const DetailPage = () => {
   const closeTrailer = () => {
     setSelectedTrailer(null);
   };
+
+  const fallbackImage = "https://via.placeholder.com/1200x600?text=No+Image+Available";
   
   return (
     <div className="game-detail-page">
@@ -71,8 +73,12 @@ const DetailPage = () => {
       <div className="game-detail-header">
         <div className="game-cover">
           <img 
-            src={game.background_image} 
+            src={game.background_image || fallbackImage} 
             alt={`Portada de ${game.name}`} 
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = fallbackImage;
+            }}
           />
         </div>
         

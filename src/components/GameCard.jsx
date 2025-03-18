@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/components/GameCard.css';
 
+// Añade una constante para la imagen de respaldo
+const fallbackImage = "https://st4.depositphotos.com/14953852/24787/v/450/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg";
+
 // Componente GameCard que muestra la información básica de un juego
 const GameCard = ({ game }) => {
   return (
@@ -10,9 +13,14 @@ const GameCard = ({ game }) => {
       {/* Contenedor de la imagen del juego */}
       <div className="game-card-image">
         <img 
-          src={game.background_image || '/placeholder.png'} 
+          src={game.background_image || fallbackImage} 
           alt={game.name} 
           loading="lazy"
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = fallbackImage;
+          }}
+          className="game-card-image"
         />
         {/* Badge con puntuación Metacritic (si existe) */}
         {game.metacritic && (
