@@ -1,0 +1,63 @@
+/* Overlay que cubre toda la pantalla cuando el modal está abierto */
+.trailer-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente negro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000; /* Asegura que el modal aparezca por encima de otros elementos */
+}
+
+/* Contenedor principal del modal */
+.trailer-modal {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+/* Encabezado del modal que contiene el título y botón de cerrar */
+.trailer-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #222;
+}
+
+/* Estilo para el título del modal */
+.trailer-modal-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Botón para cerrar el modal */
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Contenedor del video que mantiene la proporción 16:9 */
+.trailer-video-container {
+  padding-top: 56.25%; /* Proporción de aspecto 16:9 */
+  position: relative;
+}
+
+/* Video dentro del contenedor */
+.trailer-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}

@@ -1,0 +1,68 @@
+/* Estilo del encabezado principal */
+.header {
+  background-color: #1a1a1a;
+  padding: 1.2rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: sticky; /* Mantiene el header fijo al hacer scroll */
+  top: 0;
+  z-index: 100;
+}
+
+/* Contenedor para los elementos del header */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Estilo del logotipo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer; /* Indicador visual de que es clickeable */
+  transition: color 0.2s; /* Transición suave al hacer hover */
+}
+
+/* Efecto hover para el logo */
+.logo:hover {
+  color: #e50914; /* Color destacado al pasar el mouse */
+}
+
+/* Contenedor de la navegación */
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Estilo de los enlaces de navegación */
+.nav-link {
+  color: #b0b0b0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s; /* Transición suave al hacer hover */
+  cursor: pointer; /* Indicador visual de que es clickeable */
+}
+
+/* Efecto hover para los enlaces */
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* Ajustes responsivos para pantallas pequeñas */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .nav {
+    gap: 1rem;
+  }
+}

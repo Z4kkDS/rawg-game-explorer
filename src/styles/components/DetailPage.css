@@ -1,0 +1,209 @@
+/* Contenedor principal de la página de detalles del juego */
+.game-detail-page {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cabecera con información principal del juego */
+.game-detail-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Media query para pantallas medianas y grandes */
+@media (min-width: 768px) {
+  .game-detail-header {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* Contenedor de la imagen de portada del juego */
+.game-cover {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  height: 300px;
+}
+
+/* Estilos para la imagen de portada */
+.game-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Título del juego */
+.game-info h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor de metadatos del juego (puntuación, fecha, etc.) */
+.game-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilos para la puntuación de Metacritic */
+.metacritic {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Estilos base para la puntuación */
+.score {
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Variantes de color según la puntuación */
+.score.high { background-color: #6dc849; }   /* Puntuación alta */
+.score.medium { background-color: #fdca52; }  /* Puntuación media */
+.score.low { background-color: #fc4b37; }     /* Puntuación baja */
+
+/* Estilos para la fecha de lanzamiento */
+.release-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Etiquetas descriptivas */
+.label {
+  font-weight: 600;
+  color: #b0b0b0;
+}
+
+/* Secciones de información adicional */
+.game-genres, 
+.game-platforms, 
+.game-developers, 
+.game-publishers,
+.game-website {
+  margin-bottom: 1rem;
+}
+
+/* Contenedor de etiquetas */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Estilo individual de cada etiqueta */
+.tag {
+  background-color: #2a2a2a;
+  border-radius: 4px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
+}
+
+/* Enlaces al sitio web del juego */
+.game-website a {
+  color: #7b44e4;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+/* Sección de descripción del juego */
+.game-description {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Título de la sección de descripción */
+.game-description h2 {
+  margin-bottom: 1rem;
+}
+
+/* Secciones de trailers y capturas de pantalla */
+.game-trailers,
+.game-screenshots {
+  margin-bottom: 2rem;
+}
+
+/* Contenedor de trailers */
+.trailers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Miniatura del trailer */
+.trailer-thumbnail {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 180px;
+}
+
+/* Imagen del trailer con efecto hover */
+.trailer-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+/* Efecto de zoom al pasar el mouse */
+.trailer-thumbnail:hover img {
+  transform: scale(1.05);
+}
+
+/* Icono de reproducción sobre el trailer */
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+
+/* Contenedor de capturas de pantalla */
+.screenshots-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Estilo para cada captura de pantalla */
+.screenshot {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 180px;
+}
+
+/* Imagen de la captura con efecto hover */
+.screenshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+/* Efecto de zoom al pasar el mouse */
+.screenshot:hover img {
+  transform: scale(1.05);
+}

@@ -1,0 +1,25 @@
+/* Contenedor principal de la lista de juegos */
+/* Usa CSS Grid para crear un layout responsive de tarjetas */
+.game-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Estilo para el mensaje cuando no hay juegos disponibles */
+.no-games-message {
+  text-align: center;
+  padding: 4rem 1rem;
+  font-size: 1.2rem;
+  color: #8a8a8a;
+  background: #1a1a1a;
+  border-radius: 8px;
+}
+
+/* Ajustes responsivos para pantallas móviles */
+/* En pantallas menores a 480px, muestra una sola columna */
+@media (max-width: 480px) {
+  .game-list {
+    grid-template-columns: 1fr;
+  }
+}

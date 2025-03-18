@@ -1,0 +1,67 @@
+/* Contenedor principal de la barra de búsqueda */
+.search-bar {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #1f1f1f;
+}
+
+/* Estilo del campo de entrada de texto */
+.search-input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+/* Elimina el contorno al hacer focus en el input */
+.search-input:focus {
+  outline: none;
+}
+
+/* Estilo del texto placeholder */
+.search-input::placeholder {
+  color: #8a8a8a;
+}
+
+/* Estilo del botón de búsqueda */
+.search-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  background-color: #7b44e4;
+  border: none;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Efecto hover del botón */
+.search-button:hover {
+  background-color: #6535c4;
+}
+
+/* Tamaño del icono de búsqueda */
+.search-icon {
+  font-size: 1rem;
+}
+
+/* Estilos responsive para pantallas pequeñas */
+@media (max-width: 480px) {
+  /* Oculta el texto del botón en móviles, dejando solo el icono */
+  .search-button span:not(.search-icon) {
+    display: none;
+  }
+  
+  /* Ajusta el padding del botón para móviles */
+  .search-button {
+    padding: 0.8rem;
+  }
+}

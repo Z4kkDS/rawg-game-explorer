@@ -1,0 +1,32 @@
+/* Contenedor principal del loader que centra todo el contenido */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+}
+
+/* Estilo del spinner/loader circular */
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.1); /* Borde semi-transparente */
+  border-radius: 50%; /* Hace el elemento circular */
+  border-top: 4px solid #ffffff; /* Borde superior blanco que crea el efecto de giro */
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite; /* Animación de rotación continua */
+}
+
+/* Texto que aparece debajo del loader */
+.loading-text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #b0b0b0; /* Color gris claro para el texto */
+}
+
+/* Animación que define la rotación del loader */
+@keyframes spin {
+  0% { transform: rotate(0deg); }    /* Posición inicial */
+  100% { transform: rotate(360deg); } /* Rotación completa */
+}
