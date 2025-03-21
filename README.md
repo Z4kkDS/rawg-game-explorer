@@ -62,7 +62,7 @@ src/
 
 ## Despliegue
 La aplicación está desplegada en **Vercel** y puedes acceder a ella en:
-[https://rawg-game-explorer.vercel.app](https://rawg-game-explorer.vercel.app)
+[https://rawg-game-explorer.vercel.app](https://rawggameexplorer.vercel.app/)
 
 ## Autor
 **Diego Sáez** / [ZakkDev](https://github.com/Zaak-Dev)
